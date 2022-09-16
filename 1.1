@@ -1,0 +1,34 @@
+#1.1 Changes: ein input() zum schluss, damit das Ergebnis sichtbar ist und sich die Konsole nicht sofort schließt und Designverbesserungen
+from importlib import import_module
+
+#Funktionen definieren
+def add(num1, num2):
+    return num1 + num2
+def subtract(num1, num2):
+    return num1 - num2
+def multiply(num1, num2):
+    return num1 * num2
+def divide(num1, num2):
+    return num1 / num2
+#Eingabe für Zahlen
+num1 = input("Gib hier die erste Zahl ein: ")
+operation = input("Gib hier das passende Mathezeichen ein: (+ für plus, - für minus, * für multiplikation, / für geteilt durch ")
+num2 = input("Gib hier die zweite Zahl ein: ")
+#Checken ob Input eine Nummer ist
+
+#Eingabe von string in Float umwandenln
+num1 = float(num1)
+num2 = float(num2)
+#Checken welches Rechenzeichen gewählt wurde und dann rechnung, ergebnis printen
+if operation == "+":
+    print(add(num1,num2))
+elif operation == "-":
+    print(subtract(num1,num2))
+elif operation == "*":
+    print(multiply(num1,num2))
+elif operation == "/":
+    print(divide(num1,num2))
+else:
+    print("Was machst du für ne kacke")
+
+input()
