@@ -1,0 +1,36 @@
+from importlib import import_module
+while True:
+#Funktionen definieren
+    def add(num1, num2):
+        print (num1 + num2)
+    def subtract(num1, num2):
+        print  (num1 - num2)
+    def multiply(num1, num2):
+        print (num1 * num2)
+    def divide(num1, num2):
+        print (num1 / num2)
+
+#Neue Zahleneingabe:
+    def get_number():
+        n = input("Gib hier deine Zahl ein ")
+        try:
+         n = float(n)
+         return n
+        except ValueError:
+         print("Bitte gib eine Zahl ein.")
+         return get_number()
+
+    n1 = get_number()
+    operation = input("Gib hier das passende Mathezeichen ein: (+ für plus, - für minus, * für multiplikation, / für geteilt durch ")
+    n2 = get_number()
+
+    if operation == "+":
+      add(n1,n2)
+    elif operation == "-":
+     subtract(n1,n2)
+    elif operation == "*":
+     multiply(n1,n2)
+    elif operation == "/":
+     divide(n1,n2)
+    else:
+     print("Bitte gib einen gültigen Operator ein")
